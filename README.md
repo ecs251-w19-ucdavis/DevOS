@@ -11,6 +11,6 @@ Creating a distributed file system with a focus on data integrity
   
   <li><a href = "https://ieeexplore.ieee.org/document/6463376">Identity-Based Secure DistributedData Storage Schemes</a></li>
   
-  <li></li>
+
   
 </ol>
