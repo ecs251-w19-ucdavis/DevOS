@@ -18,6 +18,7 @@ app.get('/home',function(req,res){
     res.send('Sanjats Page');
 });
 
+
 //Custom 404 Page
 
 app.use(function(req,res,next){
