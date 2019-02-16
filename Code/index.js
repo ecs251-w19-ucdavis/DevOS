@@ -7,18 +7,28 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 
 
-//Custom 404 Page
-
-app.use(function(req,res){
+app.get('/home',function(req,res){
     res.type('text/plain');
     res.send('Sanjats Page');
 });
 
-app.use(function(req,res){
+//Custom 404 Page
+
+app.use(function(req,res,next){
     res.type('text/plain');
     res.status(404);
     res.send('404 - Page not found');
 });
+
+//Custom 500 Page
+
+app.use(function(req,res,next){
+    res.type('text/plain');
+    res.status(500);
+    res.send('500 - Internal Server Error');
+})
+
+
 
 
 
