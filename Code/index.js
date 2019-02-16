@@ -2,10 +2,16 @@ var server = require('http');
 var fs = require('fs');
 var express = require('express');
 
+
+
+// For File Upload
+
+const fileUpload = require('express-fileupload');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(fileUpload());
 
 app.get('/home',function(req,res){
     res.type('text/plain');
@@ -27,9 +33,6 @@ app.use(function(req,res,next){
     res.status(500);
     res.send('500 - Internal Server Error');
 })
-
-
-
 
 
 app.listen(app.get('port'),'10.0.0.188', function(){
