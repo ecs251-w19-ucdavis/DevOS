@@ -1,5 +1,5 @@
 # DevOS
-Creating a distributed file system with a focus on data integrity 
+Creating a distributed file system based on RAFT consensus protocol
 
 <a href= "https://www.overleaf.com/3375594264fsmzvphhzvtk">Project Document</a>
 
