@@ -10,9 +10,10 @@
     "Raft",
     "Consensus",
     "Node",
-    "Distributed"
+    "Distributed",
+    "File System"
   ],
-  "author": "sanjat",
+  "author": "DevOS",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"

@@ -35,6 +35,7 @@ app.get('/home',function(req,res){
     res.send('Sanjats Page');
 });
 
+
 //Custom 404 Page
 
 app.use(function(req,res,next){
@@ -52,7 +53,7 @@ app.use(function(req,res,next){
 })
 
 
-app.listen(app.get('port'),'10.0.0.188', function(){
+app.listen(app.get('port'),'10.0.0.170', function(){
     console.log('Express started on http://localhost:' +
     app.get('port') + ' ; press Ctrl-C to terminate.' );
 });
