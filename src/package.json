@@ -16,7 +16,12 @@
   "author": "DevOS",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "formidable": "^1.2.1"
+    "express": "^4.13.3",
+    "multer": "1.1.0"
+  },
+  "devDependencies": {
+    "should": "~7.1.0",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
   }
 }
