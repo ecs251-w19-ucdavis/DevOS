@@ -1,8 +1,17 @@
 <!DOCTYPE html>
     <head>
         <title>Client Side File Upload</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        <script>
+                // Making Connection 
+                console.log('About to make connection');
+    
+              var socket = io.connect('http://10.0.0.188:3000');
+            </script>
     </head>
+    
     <body>
+        
         <form ref='uploadForm' id="uploadForm" method="POST" 
         action="10.0.0.188:3000/upload"
         enctype="multipart/form-data">
@@ -11,6 +20,11 @@
         <input type="submit" value="Upload to Server" />
 
         </form>
+
+    
+
+        <h1>Hey Bitch!</h1>
+    
     </body>
 
-</html>
+</html> 
