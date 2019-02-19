@@ -16,21 +16,13 @@
   "author": "DevOS",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "express": "^4.16.4",
-    "formidable": "^1.2.1",
-    "socket.io": "^2.2.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.10"
-=======
     "express": "^4.13.3",
-    "multer": "1.1.0"
+    "multer": "1.1.0",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "should": "~7.1.0",
     "mocha": "~2.3.3",
     "supertest": "~1.1.0"
->>>>>>> 0092915889372d9454bad5a9de55ac2ed948df3b
   }
 }

@@ -26,7 +26,7 @@ process.argv.forEach((val, index) => {
 //Setting Port from command line
 app.set('port', process.env.PORT || process.argv[2]);
 
-var server = app.listen(app.get('port'),'10.0.0.188', function(){
+var server = app.listen(app.get('port'),'10.0.0.192', function(){
     console.log('Express started on http://localhost:' +
     app.get('port') + ' ; press Ctrl-C to terminate.' );
 });
