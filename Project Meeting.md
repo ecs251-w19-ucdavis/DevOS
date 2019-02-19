@@ -14,4 +14,16 @@
  **Issues**
   - ways to communicate between multiple servers
   
+ # Sanjat Mishra
+ **Last Week**
+    - Created node server on local host.
+    - Scaled the node server to across local network,
+    
+ **This Week**
+    - Worked on scaling the single server architecture to a multi server architecture
+    - Set up web sockets between the server and the client.
+    
+  **Issues**
+    - Looking for communication mechanisms between servers. (Looking at saved state instances)
+  
   
