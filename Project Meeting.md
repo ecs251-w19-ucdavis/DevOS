@@ -39,4 +39,16 @@
  **Issues**
   - ways to communicate between multiple servers
   
+   
+# Archit Garg
+**Last Week**
+  - Created a file upload system.
+  - Created the html form for the uploading of file.
+  
+**This Week**
+  - Using Life Raft module to implement Raft consensus protocol on the current architecture
+  - Work on communication between servers
+    
+**Issues**
+  - ways to communicate between multiple servers
   
