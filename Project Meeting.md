@@ -16,8 +16,8 @@
   
  # Sanjat Mishra
  **Last Week**
-    - Created node server on local host.
-    - Scaled the node server to across local network,
+    - Created node server on local host
+    - Scaled the node server to across local network
     
  **This Week**
     - Worked on scaling the single server architecture to a multi server architecture
