@@ -6,8 +6,18 @@ var socket = require('socket.io');
 var multer	=	require('multer');
 var app	=	express();
 
-
-
+//For file upload - if you run from the DevOS folder like "node src/index.js" make no changes
+//For file upload - if you run from the src folder change destination-callback to "./uploads" from "./src/uploads"
+var storage = multer.diskStorage({
+  destination: function (req, file, callback) {
+    callback(null, './src/uploads');  
+  },
+  filename: function (req, file, callback) {
+    callback(null, file.fieldname + '-' + Date.now());
+  }
+});
+var upload = multer({ storage : storage}).single('File');
+app.set('port', process.env.PORT || 3000);
 
 //Printing all commandline arguments
 process.argv.forEach((val, index) => {
@@ -17,7 +27,7 @@ process.argv.forEach((val, index) => {
 //Setting Port from command line
 app.set('port', process.env.PORT || process.argv[2]);
 
-var server = app.listen(app.get('port'),'10.0.0.192', function(){
+var server = app.listen(app.get('port'),'10.0.0.223', function(){
     console.log('Express started on http://localhost:' +
     app.get('port') + ' ; press Ctrl-C to terminate.' );
 });

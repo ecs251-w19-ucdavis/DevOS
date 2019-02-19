@@ -7,14 +7,14 @@
                 // Making Connection 
                 console.log('About to make connection');
     
-              var socket = io.connect('http://10.0.0.192:3000');
+              var socket = io.connect('http://10.0.0.223:3000');
             </script>
     </head>
     
     <body>
         <p class="primarytext"> Choose a file to uplad to DevOS File System </p>
         <form class="form" ref='uploadForm' id="uploadForm" method="POST" 
-        action="10.0.0.192:3000/upload"
+        action="10.0.0.223:3000/"
         enctype="multipart/form-data">
 
         <input class="form button" type="file" name="sampleFile" />
