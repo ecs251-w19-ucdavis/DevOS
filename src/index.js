@@ -6,16 +6,7 @@ var socket = require('socket.io');
 var multer	=	require('multer');
 var app	=	express();
 
-//For file upload - if you run from the DevOS folder like "node src/index.js" make no changes
-//For file upload - if you run from the src folder change destination-callback to "./uploads" from "./src/uploads"
-var storage	=	multer.diskStorage({
-  destination: function (req, file, callback) {
-    callback(null, './src/uploads');  
-  },
-  filename: function (req, file, callback) {
-    callback(null, file.fieldname + '-' + Date.now());
-  }
-});
+
 
 
 //Printing all commandline arguments
