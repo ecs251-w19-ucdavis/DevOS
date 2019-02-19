@@ -16,9 +16,14 @@
   "author": "DevOS",
   "license": "ISC",
   "dependencies": {
+    "debug": "^4.1.1",
     "express": "^4.13.3",
+    "growl": "^1.10.5",
+    "mime": "^2.4.0",
+    "minimatch": "^3.0.4",
     "multer": "1.1.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "superagent": "^4.1.0"
   },
   "devDependencies": {
     "should": "~7.1.0",
