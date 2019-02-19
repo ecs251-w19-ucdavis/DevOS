@@ -1,8 +1,8 @@
-#Project Meeting
+# Project Meeting
 
 <a href= "https://trello.com/b/fykgWYK4/untitled-board">Link to Trello page</a>
 
-#Ishan Jain
+# Ishan Jain
 **Last Week**
   - Created HTML webpage with CSS 
   - Updated node modules
