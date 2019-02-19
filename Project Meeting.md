@@ -25,5 +25,17 @@
     
   **Issues**
     - Looking for communication mechanisms between servers. (Looking at saved state instances)
+    
+# Kavish Doshi
+**Last Week**
+  - Worked on file transer through LAN using node 
+  - Updated node modules
+ 
+ **This Week**
+ - Work on the Life Raft implementation
+ - Work on communicating between servers
+ 
+ **Issues**
+  - ways to communicate between multiple servers
   
   
