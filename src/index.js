@@ -14,7 +14,7 @@ var app	=	express();
 
 //For file upload - if you run from the DevOS folder like "node src/index.js" make no changes
 //For file upload - if you run from the src folder change destination-callback to "./uploads" from "./src/uploads"
-var storage	=	multer.diskStorage({
+var storage = multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, './uploads');  
   },
@@ -22,7 +22,8 @@ var storage	=	multer.diskStorage({
     callback(null, file.fieldname + '-' + Date.now());
   }
 });
-
+var upload = multer({ storage : storage}).single('File');
+app.set('port', process.env.PORT || 3000);
 
 
 
