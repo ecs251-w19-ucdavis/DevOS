@@ -18,16 +18,22 @@
   "dependencies": {
     "debug": "^4.1.1",
     "express": "^4.13.3",
+    "gossiper": "0.0.3",
     "growl": "^1.10.5",
+    "json-socket": "^0.3.0",
     "mime": "^2.4.0",
     "minimatch": "^3.0.4",
     "multer": "1.1.0",
     "socket.io": "^2.2.0",
-    "superagent": "^4.1.0"
+    "superagent": "^4.1.0",
+    "webdav": "^2.5.0",
+    "webdav-client": "^1.4.2",
+    "webdav-server": "^2.4.6",
+    "zeromq": "^5.1.0"
   },
   "devDependencies": {
+    "mocha": "^6.0.0",
     "should": "~7.1.0",
-    "mocha": "~2.3.3",
-    "supertest": "~1.1.0"
+    "supertest": "^3.4.2"
   }
 }
