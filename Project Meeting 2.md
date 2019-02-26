@@ -31,6 +31,7 @@
 **Last Week**
   - Worked on setting up client and server with webdav
   - Communication between master server and remaining server using JSON messages
+
  **This Week**
   - Server communication 
   - RAFT implementation
