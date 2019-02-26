@@ -4,13 +4,15 @@
 
 # Ishan Jain
 **Last Week**
-  
+  - Worked on creating multiple servers using different ports
+  - Communicating between the master server and slave servers using JSON messages
  
  **This Week**
-  
+  - Work on communicating and sending messages between all slave servers - look into possible p2p implementations
+  - Start working on implementing RAFT modules like election etc
  
  **Issues**
-  
+  - Authnetication issues while setting up WebDav client with server.
   
 # Sanjat Mishra
 **Last Week**
