@@ -42,10 +42,13 @@
    
 # Archit Garg
 **Last Week**
-
+  - Worked on setting up Client and server on webdav
+  - Communication between different servers
   
 **This Week**
+  - Seemless working of client and server on webdav
+  - Implementation of RAFT
 
-    
 **Issues**
+  - The basic understanding and flow of Webdav
 
