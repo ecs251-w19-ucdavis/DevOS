@@ -13,3 +13,15 @@
  **Issues**
   - Authnetication issues while setting up WebDav client with server in Mac
   
+# Kavish Doshi
+**Last Week**
+  - WebDav set up and authantication 
+  - Communication between master server and remaining server 
+
+ **This Week**
+  - Solving WebDav issues 
+  - Intigrate WebDav with the Raft implementation 
+ 
+ **Issues**
+  - Authentication in webdav while setting up the connection in certain environment 
+  
