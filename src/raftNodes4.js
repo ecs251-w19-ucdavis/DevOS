@@ -22,22 +22,9 @@ class MsgRaft extends LifeRaft {
   initialize (options) {
     debug('initializing reply socket on port %s', this.address);
     console.log('Inside initialize');
-    /*
-    var server = net.createServer();
-    server.on("connection",function(socket){
-      socket = new JsonSocket(socket);
-      socket.on('message', function(message){
-          console.log('Received message from client');
-          socket.sendMessage({sms : 'Hello'});
-          
-      });
-  });
-
-    server.listen(port);
-*/
     const socket = this.socket = msg.socket('rep');
-    socket.bind(this.address);
     console.log('We just initialized : ',this.address);
+    socket.bind(this.address);
     socket.on('message', (data, fn) => {
       this.emit('data', data, fn);
     });
@@ -55,7 +42,7 @@ class MsgRaft extends LifeRaft {
    * @api private
    */
   write (packet, fn) {
-    
+    //console.log('Inside Write');
     if (!this.socket) {
       this.socket = msg.socket('req');
       console.log('Inside Write and connecting to ', this.address);
@@ -86,39 +73,22 @@ const ports = [
 //
 // The port number of this Node process.
 //
-var port0 = +argv.port || ports[0];
-var port1 = +argv.port || ports[1];
-var port2 = +argv.port || ports[2];
-var port3 = +argv.port || ports[3];
+//var port0 = +argv.port || ports[0];
+//var port1 = +argv.port || ports[1];
+//var port2 = +argv.port || ports[2];
+//var port3 = +argv.port || ports[3];
+var port4 = +argv.port || ports[4];
 
 //
 // Now that we have all our variables we can safely start up our server with our
 // assigned port number.
 //
-const raft = new MsgRaft('tcp://127.0.0.1:'+ port0, {
+const raft = new MsgRaft('tcp://127.0.0.5:'+ port4, {
   'election min': 2000,
   'election max': 5000,
   'heartbeat': 10
 });
-/*
-const raft1 = new MsgRaft('tcp://127.0.0.2:'+ port1, {
-  'election min': 2000,
-  'election max': 5000,
-  'heartbeat': 1000
-});
 
-const raft2 = new MsgRaft('tcp://127.0.0.3:'+ port2, {
-  'election min': 2000,
-  'election max': 5000,
-  'heartbeat': 1000
-});
-
-const raft3 = new MsgRaft('tcp://127.0.0.4:'+ port3, {
-  'election min': 2000,
-  'election max': 5000,
-  'heartbeat': 1000
-});
-*/
 raft.on('heartbeat timeout', function () {
   debug('heart beat timeout, starting election');
   console.log('Heart beat timed out, starting election');
@@ -127,6 +97,7 @@ raft.on('heartbeat timeout', function () {
 raft.on('term change', function (to, from) {
   debug('were now running on term %s -- was %s', to, from);
   console.log('were now running on term %s -- was %s', to, from);
+  
 }).on('leader change', function (to, from) {
   debug('we have a new leader to: %s -- was %s', to, from);
   console.log('we have a new leader to: %s -- was %s', to, from);
@@ -146,19 +117,18 @@ raft.on('candidate', function () {
   console.log('I am starting as candidate', this.address);
   console.log(LifeRaft.states[raft.state]);
   console.log('----------------------------------');
-  //raft.join('tcp://127.0.0.2' );
 });
 
 //
 // Join in other nodes so they start searching for each other.
 //
 ports.forEach((nr) => {
-  if (!nr || port0 === nr) return;
+  if (!nr || port4 === nr) return;
 
-  console.log('Exec Join', nr);
+  console.log('exec join');
   raft.join('tcp://127.0.0.1:'+ nr);
-  raft.join('tcp://127.0.0.2:' + nr);
-  raft.join('tcp://127.0.0.3:' + nr);
-  raft.join('tcp://127.0.0.4:' + nr);
-  raft.join('tcp://127.0.0.5:' + nr);
+  raft.join('tcp://127.0.0.2:'+ nr);
+  raft.join('tcp://127.0.0.3:'+ nr);
+  raft.join('tcp://127.0.0.4:'+ nr);
+  raft.join('tcp://127.0.0.5:'+ nr);
 });
