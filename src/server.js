@@ -10,8 +10,11 @@ socket.connect(port, host);
 
 socket.on('connect', function() { //Don't send until we're connected
     socket.sendMessage({a: 5, b: 7});
+    console.log('Checking Raft State');
+    console.log(LifeRaft.states[raft.state]); // FOLLOWER
     console.log('Client Sending Message!');
     socket.on('message', function(message) {
         console.log('The result is: '+message.sum + 'sent by server on port: ' +message.portSend);
     });
 });
+

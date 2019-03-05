@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <!-- Load the library -->
+        <script src="../js/browserified.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        <script>
+            // Making Connection 
+            console.log('About to make connection');
+            var socket = io.connect('http://localhost:3000');
+
+            window.open('http://168.150.62.153/webdav');
+            
+        </script>
+    </head>
+    <body> Hey
+        <p>Go to <a href="http://168.150.62.153/webdav">Go to webdav</a></p>
+    </body>
+
+</html>
