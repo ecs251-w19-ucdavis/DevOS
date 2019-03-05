@@ -15,7 +15,7 @@
   
 # Kavish Doshi
 **Last Week**
-  - WebDav set up and authantication 
+  - WebDav set up and authentication 
   - Communication between master server and remaining server 
 
  **This Week**
@@ -24,4 +24,15 @@
  
  **Issues**
   - Authentication in webdav while setting up the connection in certain environment 
+  
+# Archit Garg
+**Last Week**
+  - Setting up WebDav and authenticating it 
+  - Communication between master server and remaining server 
+
+ **This Week**
+  - Integrating WebDav with Raft implementation 
+ 
+ **Issues**
+  - Authentication issues when setting up Webdav in MacOS
   
