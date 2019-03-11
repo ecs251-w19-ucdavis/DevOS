@@ -12,7 +12,7 @@
   - Start working on implementing RAFT modules like election etc
  
  **Issues**
-  - Authnetication issues while setting up WebDav client with server.
+  - WebDav issues with MacBook
   
 # Sanjat Mishra
 **Last Week**

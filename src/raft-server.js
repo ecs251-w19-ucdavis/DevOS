@@ -159,6 +159,6 @@ ports.forEach((nr) => {
   raft.join('tcp://127.0.0.1:'+ nr);
   raft.join('tcp://127.0.0.2:' + nr);
   raft.join('tcp://127.0.0.3:' + nr);
-  //raft.join('tcp://127.0.0.4:' + nr);
-  //raft.join('tcp://127.0.0.4:' + nr);
+  raft.join('tcp://127.0.0.4:' + nr);
+  raft.join('tcp://127.0.0.5:' + nr);
 });
