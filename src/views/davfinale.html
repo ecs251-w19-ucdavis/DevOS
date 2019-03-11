@@ -1,0 +1,19 @@
+<html>
+    <head>
+            <script src="../js/browserified.js"></script> 
+    </head>
+    <body>
+        <script>
+            //fetch(request, {mode: 'cors'});
+            const connection = new webdavClient.Connection('http://localhost:9988');
+
+            connection.get('/webdav/server', (e, content) => {
+                if(e)
+                    throw e;
+                
+                console.log(content);
+            });
+        </script>
+    </body>
+</html>
+
