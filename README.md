@@ -14,3 +14,13 @@ Creating a distributed file system based on RAFT consensus protocol
 
   
 </ol>
+
+# Running WebDav on Node JS
+**Follow the steps to run webdav server and connect multiple clients.**
+  - Clone the repository
+  - Open a terminal and run "npm install" . This will install all the required dependencies.
+  - Run the command "node helperServer.js". This is used to setup the Webdav server on localhost with port 4000.
+  - To run webdav client, open a terminal and run "node runWebDavClient.js  <command-name>  <arg(optional)>"
+
+# To be updated
+**Add list of commands**
