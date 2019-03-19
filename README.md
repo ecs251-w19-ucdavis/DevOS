@@ -24,3 +24,4 @@ Creating a distributed file system based on RAFT consensus protocol
 
 # To be updated
 **Add list of commands**
+sudo ifconfig lo0 alias 127.0.0.3 up - For Raft
